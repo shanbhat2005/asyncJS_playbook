@@ -28,28 +28,28 @@
 //     resultDikhao(cbData.rollno,function(result){
 // console.log(result);
 //     })
-    
+
 // })
 
 // promises are used when our data is only in 2 forms either it is resolved or it is rejected
 
-let pr = new Promise(function(res,rej){
+let pr = new Promise(function (res, rej) {
     setTimeout(() => {
         let err = false;
 
-        if(err==false){
+        if (err == false) {
             res('success...')
         }
-        else{
+        else {
             rej('failed...')
         }
     }, 2000);
 })
 
-pr.then(function(data){
-console.log(data)
+pr.then(function (data) {
+    console.log(data)
 })
 
-pr.catch(function(data){
-console.log(data)
+pr.catch(function (data) {
+    console.log(data)
 })
