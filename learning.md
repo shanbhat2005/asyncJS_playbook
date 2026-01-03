@@ -28,7 +28,7 @@ let promise = new Promise(function(res,rej))
 the promise will look like this from inside
 ```js
 let promise = new Promise(function(res,rej){
-    setTimeout(funciton(){
+    setTimeout(function(){
 if(true){
     res(value)
 }
@@ -52,4 +52,34 @@ promise.catch(function(data){
 })
  ```
 
- hello
+## (3) using async await
+
+first we have to create a promise
+```js
+let pr = new Promise(function(res,rej){
+    setTimeout(function(){
+        if((Math.floor(Math.random)*10){
+            res("success...")
+        })
+        else rej("failed...")
+    })
+})
+```
+then we have to create an async function
+
+```js
+async function abcd(){
+
+}
+```
+after we created an async function we have to call the promise but inside try block and use catch block to get the answer of reject
+
+```js
+async function abcd(){
+try{
+    let ans = await pr
+}catch(err){
+    console.log(err);
+}
+}
+```
